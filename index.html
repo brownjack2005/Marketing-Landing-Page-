@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jack Brown Marketing</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18214634741"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18214634741');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #f2ede8;
+      --bg-dark:  #e8e2db;
+      --ink:      #1c1917;
+      --mid:      #6b6560;
+      --rule:     #d6cfc8;
+      --white:    #faf8f6;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 2.5rem;
+      border-bottom: 1px solid var(--rule);
+      background: var(--bg);
+    }
+    .nav-logo {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+    .nav-cta {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* HERO */
+    .hero {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 6rem 2.5rem 5rem;
+    }
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2.1rem, 5vw, 3.2rem);
+      line-height: 1.2;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.5rem;
+      color: var(--ink);
+    }
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--mid);
+      line-height: 1.8;
+      max-width: 540px;
+      margin-bottom: 2.25rem;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--ink);
+      color: var(--white);
+      padding: 0.85rem 1.85rem;
+      border-radius: 5px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+    .hero-cta:hover { opacity: 0.85; }
+    .hero-note {
+      display: block;
+      margin-top: 0.9rem;
+      font-size: 0.8rem;
+      color: var(--mid);
+    }
+
+    /* DIVIDER */
+    hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+    }
+
+    /* BODY SECTIONS */
+    .section {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 4.5rem 2.5rem;
+    }
+    .section h2 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+    .section p {
+      color: var(--mid);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      max-width: 580px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* WHAT I DO - plain list, no cards */
+    .plain-list {
+      margin-top: 2rem;
+      list-style: none;
+      border-top: 1px solid var(--rule);
+    }
+    .plain-list li {
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+    .plain-list .item-title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--ink);
+      padding-top: 0.1rem;
+    }
+    .plain-list .item-desc {
+      font-size: 0.9rem;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+
+    /* ABOUT */
+    .about-section {
+      background: var(--bg-dark);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    /* FORM */
+    .form-section {
+      background: var(--white);
+      border-top: 1px solid var(--rule);
+    }
+    .form-inner {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 4.5rem 2.5rem;
+    }
+    .form-inner h2 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 0.85rem;
+      letter-spacing: -0.01em;
+    }
+    .form-inner > p {
+      color: var(--mid);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 2.25rem;
+      max-width: 520px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.1rem;
+    }
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.03em;
+    }
+    input, select {
+      padding: 0.75rem 0.9rem;
+      border: 1px solid var(--rule);
+      border-radius: 5px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.925rem;
+      color: var(--ink);
+      background: var(--bg);
+      outline: none;
+      transition: border-color 0.15s;
+      width: 100%;
+    }
+    input:focus, select:focus { border-color: var(--ink); }
+    input::placeholder { color: #aaa; }
+
+    .submit-btn {
+      margin-top: 0.25rem;
+      background: var(--ink);
+      color: var(--white);
+      border: none;
+      padding: 0.9rem;
+      border-radius: 5px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      width: 100%;
+      letter-spacing: 0.01em;
+      transition: opacity 0.15s;
+    }
+    .submit-btn:hover { opacity: 0.85; }
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--mid);
+    }
+
+    /* SUCCESS */
+    .form-success {
+      display: none;
+      padding: 2.5rem 0;
+    }
+    .form-success h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .form-success p {
+      color: var(--mid);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 1.5rem 2.5rem;
+      font-size: 0.78rem;
+      color: var(--mid);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      background: var(--bg);
+    }
+
+    @media (max-width: 560px) {
+      .field-row { grid-template-columns: 1fr; }
+      .plain-list li { grid-template-columns: 1fr; gap: 0.4rem; }
+      nav { padding: 1rem 1.25rem; }
+      .hero, .section, .form-inner { padding-left: 1.25rem; padding-right: 1.25rem; }
+      footer { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" class="nav-logo">Jack Brown Marketing</a>
+    <a href="#audit" class="nav-cta">Get a free audit</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Most people pick a local business based on Google. Is yours ready for that?</h1>
+    <p>I help small businesses in Oxford County clean up their Google presence, build up their reviews, and make sure the first thing a customer sees actually gives them a reason to walk through the door.</p>
+    <a href="#audit" class="hero-cta">Get a free audit</a>
+    <span class="hero-note">I'll look at your profile and send you an honest breakdown within 48 hours. No cost, no pitch.</span>
+  </section>
+
+  <hr />
+
+  <!-- THE PROBLEM -->
+  <section class="section">
+    <h2>A weak Google profile is costing you customers you never even know about.</h2>
+    <p>Someone searches for what you do, finds your listing, sees 11 reviews from three years ago and a photo of your parking lot, and clicks the next result. That happens dozens of times a week for most local businesses and nobody ever tells them.</p>
+    <p>It's not about being better at what you do. It's about making sure that when someone's already looking for you, what they find doesn't talk them out of it.</p>
+  </section>
+
+  <hr />
+
+  <!-- WHAT I DO -->
+  <section class="section">
+    <h2>What I actually do for you.</h2>
+    <p>It's not complicated. Here's exactly what's included.</p>
+
+    <ul class="plain-list">
+      <li>
+        <span class="item-title">Profile optimization</span>
+        <span class="item-desc">Every field filled out properly. The right categories, a description that shows up in searches, accurate hours, and a Q&A section that answers what customers are already asking.</span>
+      </li>
+      <li>
+        <span class="item-title">Review generation</span>
+        <span class="item-desc">I build a simple system for your business so that happy customers actually leave reviews. A QR code, a process your staff can follow, and a direct link that makes it as easy as possible. Most businesses see results within the first two weeks.</span>
+      </li>
+      <li>
+        <span class="item-title">Photos</span>
+        <span class="item-desc">Profiles with good photos get significantly more clicks. I'll make sure yours has current, well-organized images that actually represent the business.</span>
+      </li>
+      <li>
+        <span class="item-title">Review responses</span>
+        <span class="item-desc">Every review gets a response, good or bad. People reading your reviews pay attention to how you handle the negative ones just as much as the positive ones.</span>
+      </li>
+      <li>
+        <span class="item-title">Monthly reporting</span>
+        <span class="item-desc">Each month I send you a short report showing your profile views, search impressions, and how many reviews you've gained. You always know what's happening.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ABOUT -->
+  <div class="about-section">
+    <section class="section">
+      <h2>A little about me.</h2>
+      <p>I'm Jack Brown, a marketing student at Fanshawe College from Ingersoll. I've been studying marketing with a focus on digital and performance marketing, and I've spent the last couple years learning what actually moves the needle for small businesses online.</p>
+      <p>I grew a YouTube channel to over 1.35 million organic views with no ad spend, which taught me more about attention and trust than most textbooks cover. Now I'm focused on helping local businesses in the area get more visible online, starting with the basics that most people overlook.</p>
+      <p>I work with a small number of clients so I can actually do the job properly. If the audit shows I can help you, I'll tell you exactly what I'd do and what it would cost. If it doesn't, I'll tell you that too.</p>
+    </section>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-section" id="audit">
+    <div class="form-inner">
+      <h2>Request your free audit.</h2>
+      <p>Fill this out and I'll take a look at your current Google presence. You'll hear back from me within 48 hours with a straightforward breakdown of what's working, what isn't, and what I'd fix first.</p>
+
+      <form
+        name="audit-request"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        id="auditForm"
+      >
+        <input type="hidden" name="form-name" value="audit-request" />
+        <div style="display:none"><input name="bot-field" /></div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="Sarah Mitchell" required />
+          </div>
+          <div class="field">
+            <label for="business">Business name</label>
+            <input type="text" id="business" name="business" placeholder="Mitchell's Bakery" required />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@yourbusiness.com" required />
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="519-000-0000" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="reviews">How many Google reviews do you have right now?</label>
+          <select id="reviews" name="reviews" required>
+            <option value="" disabled selected>Pick a range</option>
+            <option value="0-10">0 to 10</option>
+            <option value="11-30">11 to 30</option>
+            <option value="31-60">31 to 60</option>
+            <option value="60+">More than 60</option>
+          </select>
+        </div>
+
+        <button type="submit" class="submit-btn">Send my audit request</button>
+        <p class="form-note">No spam. If I can't help you I'll say so.</p>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <h3>Got it.</h3>
+        <p>I'll look at your Google presence and get back to you within 48 hours. Check your inbox.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>Jack Brown Marketing</span>
+    <span>Ingersoll, Ontario. Serving Oxford County.</span>
+  </footer>
+
+  <script>
+    const form = document.getElementById('auditForm');
+    const success = document.getElementById('formSuccess');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const response = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(data).toString(),
+        });
+
+        if (!response.ok) {
+          throw new Error('Form submission failed');
+        }
+
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+            send_to: 'AW-18214634741',
+          });
+        }
+
+        form.style.display = 'none';
+        success.style.display = 'block';
+      } catch {
+        alert('Something went wrong. Please try again.');
+      }
+    });
+  </script>
+
+</body>
+</html>
