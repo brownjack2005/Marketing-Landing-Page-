@@ -4,6 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jack Brown Marketing</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18214634741"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18214634741');
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -416,11 +425,22 @@
       e.preventDefault();
       const data = new FormData(form);
       try {
-        await fetch('/', {
+        const response = await fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: new URLSearchParams(data).toString(),
         });
+
+        if (!response.ok) {
+          throw new Error('Form submission failed');
+        }
+
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {
+            send_to: 'AW-18214634741',
+          });
+        }
+
         form.style.display = 'none';
         success.style.display = 'block';
       } catch {
